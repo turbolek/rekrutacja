@@ -1,0 +1,94 @@
+form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%
+}
+
+li {
+	display: inline-block;
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+	border: 3px solid white;
+	border-radius: 20px;
+	cursor: pointer;
+	color: transparent;
+	display:inline-block;
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
+input[type="checkbox"] + label:hover:before {
+	content: attr(data-sentence);
+	color: white;
+	font-size: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	width: 250px;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 10px;
+	box-sizing: border-box;
+
+}
+
+input[id="checkbox_yoda"] + label {
+	background-image: url('../images/yoda.png');
+}
+
+input[id="checkbox_trooper"] + label {
+
+	background-image: url('../images/trooper.png');
+
+}
+
+input[id="checkbox_vader"] + label {
+
+	background-image: url('../images/vader.png');
+}
+
+input[type="checkbox"]:checked + label {
+	border: 3px solid black;
+}
+
+button {
+	background: black;
+	color: yellow;
+	height: 60px;
+	width: 300px;
+	border: none;
+	font-size: 26px;
+	position: relative;
+}
+
+button:hover {
+	background: yellow;
+	color: black;
+}
+
+button:before {
+	border-bottom: 30px solid transparent;
+	border-top: 30px solid transparent;
+	border-left: 30px solid black;
+	content: "";
+	height: 0;
+	left: 300px;
+	bottom: 0px;
+	position: absolute;
+	width: 0;
+}
+
+button:hover:before {
+	border-left: 30px solid yellow;
+}
+
